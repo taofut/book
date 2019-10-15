@@ -1,0 +1,18 @@
+{
+  "data": [{
+    "name": "计算配置管理",
+    "nodeType": "GROUP",
+    "nodeId": "JSPZGL",
+    "children": [{
+      "name": "主题表管理",
+      "nodeType": "LEAF",
+      "nodeId": "ZTBGL",
+      "url": "/tzzk/html/ztb/ztbgl.html"
+    }, {
+      "name": "指标管理",
+      "nodeType": "LEAF",
+      "nodeId": "ZBGL",
+      "url": "/tzzk/html/zbgl/zbgl.html"
+    }]
+  }]
+}

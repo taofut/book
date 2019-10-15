@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>layout 后台大布局 - Layui</title>
     <link rel="stylesheet" href="../layui/css/layui.css">
-
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
@@ -40,16 +39,15 @@
         </ul>
     </div>
 
-    <div class="layui-side layui-bg-black">
-        <!--<div class="layui-side-scroll">-->
-            <!--<ul id="menu"></ul>-->
-        <!--</div>-->
-        <ul id="menu"></ul>
+    <div class="layui-side layui-bg-black" id="menuTree">
+
+
     </div>
 
-    <div class="layui-body">
-        <!-- 内容主体区域 -->
-        <!--<div style="padding: 15px;">内容主体区域</div>-->
+    <!--tab标签-->
+    <div class="layui-tab" lay-filter="demo" lay-allowclose="true" style="margin-left: 200px;">
+        <ul class="layui-tab-title"></ul>
+        <div class="layui-tab-content"></div>
     </div>
 
     <div class="layui-footer">
@@ -57,18 +55,8 @@
         © layui.com - 底部固定区域
     </div>
 </div>
+
 <script src="../layui/layui.js"></script>
-<script>
-    layui.use(['element', 'tree', 'layer', 'form', 'upload'], function () {
-        var $ = layui.jquery, tree = layui.tree;
-        //数据源
-        var data2 = [{"title":"我的图书","children":[{"title":"java"},{"title":"c语言"}]}];
-        tree.render({
-            elem: "#menu"
-            ,
-            data: data2
-        });
-    });
-</script>
+<script src="../layui/myjs/index.js"></script>
 </body>
 </html>
