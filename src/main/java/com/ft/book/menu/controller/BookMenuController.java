@@ -41,29 +41,51 @@ public class BookMenuController {
     @RequestMapping("/getMenuTree")
     public String getMenuTree(HttpServletRequest request){
 
-        JSONObject menuNode9 = new JSONObject();
-        JSONObject menuNode10 = new JSONObject();
+        JSONObject menuNodeTsgl0 = new JSONObject();
+        JSONObject menuNodeTsgl1 = new JSONObject();
+        menuNodeTsgl0.put("nodeId", "TSLXGL");
+        menuNodeTsgl0.put("name", "图书类型管理");
+        menuNodeTsgl0.put("url", request.getContextPath() + "/book/tsgl/tslxgl.html");
+        menuNodeTsgl0.put("nodeType", "LEAF");
+        menuNodeTsgl1.put("nodeId", "TSDAGL");
+        menuNodeTsgl1.put("name", "图书档案管理");
+        menuNodeTsgl1.put("url", request.getContextPath() + "/book/tsgl/tsdagl.html");
+        menuNodeTsgl1.put("nodeType", "LEAF");
 
-        menuNode10.put("nodeId", "ZTBGL");
-        menuNode10.put("name", "主题表管理");
-        menuNode10.put("url", request.getContextPath() + "/tzzk/html/ztb/ztbgl.html");
-        menuNode10.put("nodeType", "LEAF");
-        menuNode9.put("nodeId", "ZBGL");
-        menuNode9.put("name", "指标管理");
-        menuNode9.put("url", request.getContextPath() + "/tzzk/html/zbgl/zbgl.html");
-        menuNode9.put("nodeType", "LEAF");
+        JSONObject menuNodeDzgl0 = new JSONObject();
+        JSONObject menuNodeDzgl1 = new JSONObject();
+        menuNodeDzgl0.put("nodeId", "DZLXGL");
+        menuNodeDzgl0.put("name", "读者类型管理");
+        menuNodeDzgl0.put("url", request.getContextPath() + "/book/dzgl/dzlxgl.html");
+        menuNodeDzgl0.put("nodeType", "LEAF");
+        menuNodeDzgl1.put("nodeId", "DZDAGL");
+        menuNodeDzgl1.put("name", "读者档案管理");
+        menuNodeDzgl1.put("url", request.getContextPath() + "/book/dzgl/dzdagl.html");
+        menuNodeDzgl1.put("nodeType", "LEAF");
 
-        JSONArray menuNodeListJspzgl = new JSONArray();
-        menuNodeListJspzgl.add(menuNode10);
-        menuNodeListJspzgl.add(menuNode9);
+        //读者管理
+        JSONArray menuNodeList0 = new JSONArray();
+        menuNodeList0.add(menuNodeDzgl0);
+        menuNodeList0.add(menuNodeDzgl1);
         JSONObject menuNode0 = new JSONObject();
-        menuNode0.put("nodeId", "JSPZGL");
-        menuNode0.put("name", "计算配置管理");
+        menuNode0.put("nodeId", "DZGL");
+        menuNode0.put("name", "读者管理");
         menuNode0.put("nodeType", "GROUP");
-        menuNode0.put("children", menuNodeListJspzgl);
+        menuNode0.put("children", menuNodeList0);
+
+        //图书管理
+        JSONArray menuNodeList1 = new JSONArray();
+        menuNodeList1.add(menuNodeTsgl0);
+        menuNodeList1.add(menuNodeTsgl1);
+        JSONObject menuNode1 = new JSONObject();
+        menuNode1.put("nodeId", "TSGL");
+        menuNode1.put("name", "图书管理");
+        menuNode1.put("nodeType", "GROUP");
+        menuNode1.put("children", menuNodeList1);
 
         JSONArray menuRootList = new JSONArray();
         menuRootList.add(menuNode0);
+        menuRootList.add(menuNode1);
         JSONObject result = new JSONObject();
         result.put("data", menuRootList);
 
