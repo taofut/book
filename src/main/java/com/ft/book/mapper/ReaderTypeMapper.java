@@ -1,7 +1,9 @@
 package com.ft.book.mapper;
 
 import com.ft.book.bean.ReaderType;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ReaderTypeMapper {
     int deleteByPrimaryKey(Integer id);
 
