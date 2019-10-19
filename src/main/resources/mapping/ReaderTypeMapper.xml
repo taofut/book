@@ -6,6 +6,16 @@
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="number" property="number" jdbcType="INTEGER" />
   </resultMap>
+
+  <select id="findPageList" resultMap="BaseResultMap" parameterType="Map">
+    SELECT
+    id,
+    NAME,
+    number
+    FROM
+    tb_readertype
+  </select>
+
   <sql id="Base_Column_List" >
     id, name, number
   </sql>

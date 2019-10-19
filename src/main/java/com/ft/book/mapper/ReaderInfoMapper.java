@@ -15,7 +15,5 @@ public interface ReaderInfoMapper {
 
     int updateByPrimaryKeySelective(ReaderInfo record);
 
-    int updateByPrimaryKeyWithBLOBs(ReaderInfo record);
-
     int updateByPrimaryKey(ReaderInfo record);
 }

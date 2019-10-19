@@ -14,23 +14,17 @@
     <result column="email" property="email" jdbcType="VARCHAR" />
     <result column="createDate" property="createdate" jdbcType="DATE" />
     <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
     <result column="typeid" property="typeid" jdbcType="INTEGER" />
   </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.ft.book.bean.ReaderInfo" extends="BaseResultMap" >
-    <result column="remark" property="remark" jdbcType="LONGVARCHAR" />
-  </resultMap>
+
   <sql id="Base_Column_List" >
     id, name, sex, barcode, vocation, birthday, paperType, paperNO, tel, email, createDate, 
-    operator, typeid
+    operator, remark, typeid
   </sql>
-  <sql id="Blob_Column_List" >
-    remark
-  </sql>
-  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
     from tb_reader
     where id = #{id,jdbcType=INTEGER}
   </select>
@@ -43,12 +37,12 @@
       barcode, vocation, birthday, 
       paperType, paperNO, tel, 
       email, createDate, operator, 
-      typeid, remark)
+      remark, typeid)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, 
       #{barcode,jdbcType=VARCHAR}, #{vocation,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, 
       #{papertype,jdbcType=VARCHAR}, #{paperno,jdbcType=VARCHAR}, #{tel,jdbcType=VARCHAR}, 
       #{email,jdbcType=VARCHAR}, #{createdate,jdbcType=DATE}, #{operator,jdbcType=VARCHAR}, 
-      #{typeid,jdbcType=INTEGER}, #{remark,jdbcType=LONGVARCHAR})
+      #{remark,jdbcType=VARCHAR}, #{typeid,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.ft.book.bean.ReaderInfo" >
     insert into tb_reader
@@ -89,11 +83,11 @@
       <if test="operator != null" >
         operator,
       </if>
-      <if test="typeid != null" >
-        typeid,
-      </if>
       <if test="remark != null" >
         remark,
+      </if>
+      <if test="typeid != null" >
+        typeid,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -133,11 +127,11 @@
       <if test="operator != null" >
         #{operator,jdbcType=VARCHAR},
       </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
       <if test="typeid != null" >
         #{typeid,jdbcType=INTEGER},
-      </if>
-      <if test="remark != null" >
-        #{remark,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -177,30 +171,13 @@
       <if test="operator != null" >
         operator = #{operator,jdbcType=VARCHAR},
       </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
       <if test="typeid != null" >
         typeid = #{typeid,jdbcType=INTEGER},
       </if>
-      <if test="remark != null" >
-        remark = #{remark,jdbcType=LONGVARCHAR},
-      </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.ft.book.bean.ReaderInfo" >
-    update tb_reader
-    set name = #{name,jdbcType=VARCHAR},
-      sex = #{sex,jdbcType=VARCHAR},
-      barcode = #{barcode,jdbcType=VARCHAR},
-      vocation = #{vocation,jdbcType=VARCHAR},
-      birthday = #{birthday,jdbcType=DATE},
-      paperType = #{papertype,jdbcType=VARCHAR},
-      paperNO = #{paperno,jdbcType=VARCHAR},
-      tel = #{tel,jdbcType=VARCHAR},
-      email = #{email,jdbcType=VARCHAR},
-      createDate = #{createdate,jdbcType=DATE},
-      operator = #{operator,jdbcType=VARCHAR},
-      typeid = #{typeid,jdbcType=INTEGER},
-      remark = #{remark,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.ft.book.bean.ReaderInfo" >
@@ -216,6 +193,7 @@
       email = #{email,jdbcType=VARCHAR},
       createDate = #{createdate,jdbcType=DATE},
       operator = #{operator,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
       typeid = #{typeid,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>

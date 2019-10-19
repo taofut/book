@@ -30,8 +30,8 @@ public class ReaderInfo {
 
     private String operator;
 
-    private Integer typeid;
-
     private String remark;
+
+    private Integer typeid;
 
 }

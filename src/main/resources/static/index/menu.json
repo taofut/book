@@ -1,18 +1,17 @@
-{
-  "data": [{
-    "name": "计算配置管理",
-    "nodeType": "GROUP",
-    "nodeId": "JSPZGL",
-    "children": [{
-      "name": "主题表管理",
-      "nodeType": "LEAF",
-      "nodeId": "ZTBGL",
-      "url": "/tzzk/html/ztb/ztbgl.html"
-    }, {
-      "name": "指标管理",
-      "nodeType": "LEAF",
-      "nodeId": "ZBGL",
-      "url": "/tzzk/html/zbgl/zbgl.html"
-    }]
-  }]
+{"data":[{
+  "id": 1,
+  "name": "wgh",
+  "sex": "男",
+  "barcode": "2008010100001",
+  "vocation": "的",
+  "birthday": "1980-07-16T16:00:00.000+0000",
+  "papertype": "身份证",
+  "paperno": "2201041980********",
+  "tel": "13634*******",
+  "email": "wgh717@****.com",
+  "createdate": "2007-11-21T16:00:00.000+0000",
+  "operator": "tsoft",
+  "remark": "的",
+  "typeid": 1
+}]
 }
