@@ -51,6 +51,12 @@ public class PagerUtils {
         }
     }
 
+    public static final void startPage(String limit, String page) {
+        int pageSize = Integer.parseInt(StringUtils.isEmpty(limit) ? "20" : limit);
+        pageSize = pageSize < 0 ? 0 : pageSize;
+        int pageIndex = Integer.parseInt(StringUtils.isEmpty(page) ? "0" : page);
+        PageHelper.startPage(pageIndex, pageSize);
+    }
 
     public static final void startPage(String pageSize1, String pageIndex1, String synQuery, String loadRowCount,
                                        String sortField, String sortOrder) {

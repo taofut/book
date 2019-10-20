@@ -24,8 +24,9 @@ public class ReaderTypeServiceImpl implements ReaderTypeService {
 
     @Override
     public PagerBean findPageList(Map<String, Object> params) {
-        PagerUtils.startPage((String) params.get("pageSize"), (String) params.get("pageIndex"), (String) params.get("synQuery"),
-                (String) params.get("loadRowCount"), (String) params.get("sortField"), (String) params.get("sortOrder"));
+//        PagerUtils.startPage((String) params.get("pageSize"), (String) params.get("pageIndex"), (String) params.get("synQuery"),
+//                (String) params.get("loadRowCount"), (String) params.get("sortField"), (String) params.get("sortOrder"));
+        PagerUtils.startPage((String) params.get("limit"), (String) params.get("page"));
         List<ReaderType> result = readerTypeMapper.findPageList(params);
         return new PagerBean<ReaderType>(result);
     }

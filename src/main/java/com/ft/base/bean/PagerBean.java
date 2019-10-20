@@ -22,6 +22,11 @@ public class PagerBean<T> implements Serializable {
     private int pages; // 总页数
     private int size; //当前页的数量<=pageSize
 
+    //layui要求返回的参数
+    private String code="0";
+    private String msg;
+    private long count;
+
     public PagerBean(List<T> list) {
         if(list instanceof Page) {
             Page<T> page = (Page)list;
@@ -32,6 +37,7 @@ public class PagerBean<T> implements Serializable {
             this.data = page;
             this.size = page.size();
             this.pageIndex = page.getPageNum();
+            this.count=page.getTotal();
         }
     }
 }
