@@ -75,7 +75,7 @@ layui.use(['table', 'laypage','jquery'], function(){
         //页面层
         layer.open({
             type : 2,
-            offset: 'auto',
+            offset: '100px',
             title : '类型添加',
             area : [ '465px', '250px' ],
             fix : false,

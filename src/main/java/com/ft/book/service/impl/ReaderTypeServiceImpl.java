@@ -5,6 +5,7 @@ import com.ft.base.utils.PagerUtils;
 import com.ft.book.bean.ReaderType;
 import com.ft.book.mapper.ReaderTypeMapper;
 import com.ft.book.service.ReaderTypeService;
+import com.ft.book.utils.BookResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,5 +30,15 @@ public class ReaderTypeServiceImpl implements ReaderTypeService {
         PagerUtils.startPage((String) params.get("limit"), (String) params.get("page"));
         List<ReaderType> result = readerTypeMapper.findPageList(params);
         return new PagerBean<ReaderType>(result);
+    }
+
+    @Override
+    public BookResult save(ReaderType readerType) {
+        try {
+            readerTypeMapper.insert(readerType);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return BookResult.ok();
     }
 }
