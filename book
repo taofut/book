@@ -595,3 +595,1353 @@ org.apache.ibatis.binding.BindingException: Mapper method 'com.ft.book.mapper.Re
 2019-10-22 16:15:16.135 DEBUG 6192 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: we(String)
 2019-10-22 16:15:16.139 DEBUG 6192 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 1
 2019-10-22 16:15:25.451 ERROR 6192 --- [http-nio-8080-exec-6] c.f.b.s.impl.ReaderTypeServiceImpl       : 读者类型已经存在！
+2019-10-22 21:07:04.965  INFO 2916 --- [main] com.ft.BookApplication                   : Starting BookApplication on futao with PID 2916 (started by Administrator in G:\毕业设计demo\book_git\book)
+2019-10-22 21:07:04.968  INFO 2916 --- [main] com.ft.BookApplication                   : No active profile set, falling back to default profiles: default
+2019-10-22 21:07:07.675  INFO 2916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-22 21:07:07.730  INFO 2916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-22 21:07:07.730  INFO 2916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-10-22 21:07:08.020  INFO 2916 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-22 21:07:08.021  INFO 2916 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2979 ms
+2019-10-22 21:07:08.157  INFO 2916 --- [main] com.ft.conf.DataSourceConfiguration      : 正在初始化数据源{spring.datasource}
+2019-10-22 21:07:09.113  INFO 2916 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-22 21:07:09.535  INFO 2916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-22 21:07:09.553  INFO 2916 --- [main] com.ft.BookApplication                   : Started BookApplication in 6.822 seconds (JVM running for 7.885)
+2019-10-22 21:24:01.850  INFO 2916 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-22 21:24:01.851  INFO 2916 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-22 21:24:01.866  INFO 2916 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2019-10-22 21:24:04.766  INFO 2916 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-10-22 21:24:05.054 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:05.061 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:05.061  INFO 2916 --- [Druid-ConnectionPool-Create-671714696] c.a.druid.pool.DruidAbstractDataSource   : {dataSource-1} failContinuous is true
+2019-10-22 21:24:05.567 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:06.070 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:06.574 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:07.077 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:07.580 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:08.086 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:08.590 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:09.093 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:09.597 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:10.101 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:10.604 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:11.109 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:11.612 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:12.117 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:12.622 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:13.125 ERROR 2916 --- [Druid-ConnectionPool-Create-671714696] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/db_book?useUnicode=true&characterEncoding=utf8, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:864) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1707) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1217) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2220) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2015) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:768) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at sun.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:385) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:323) ~[mysql-connector-java-5.1.48.jar:5.1.48]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1643) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1709) ~[druid-1.1.20.jar:1.1.20]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2715) ~[druid-1.1.20.jar:1.1.20]
+
+2019-10-22 21:24:36.572  INFO 4712 --- [main] com.ft.BookApplication                   : Starting BookApplication on futao with PID 4712 (started by Administrator in G:\毕业设计demo\book_git\book)
+2019-10-22 21:24:36.576  INFO 4712 --- [main] com.ft.BookApplication                   : No active profile set, falling back to default profiles: default
+2019-10-22 21:24:40.080  INFO 4712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-22 21:24:40.126  INFO 4712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-22 21:24:40.127  INFO 4712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-10-22 21:24:40.372  INFO 4712 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-22 21:24:40.372  INFO 4712 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3722 ms
+2019-10-22 21:24:40.553  INFO 4712 --- [main] com.ft.conf.DataSourceConfiguration      : 正在初始化数据源{spring.datasource}
+2019-10-22 21:24:41.691  INFO 4712 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-22 21:24:43.756  INFO 4712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-22 21:24:43.766  INFO 4712 --- [main] com.ft.BookApplication                   : Started BookApplication in 7.952 seconds (JVM running for 8.869)
+2019-10-22 21:24:59.231  INFO 4712 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-22 21:24:59.231  INFO 4712 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-22 21:24:59.276  INFO 4712 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 44 ms
+2019-10-22 21:25:01.073  INFO 4712 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-10-22 21:25:01.470 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:01.496 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:01.556 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:01.559 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:01.560 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:25:01.563 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:25:02.396 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:02.396 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:02.402 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:02.403 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:02.404 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:25:02.408 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:25:03.618 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:03.619 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:03.620 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:03.621 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:03.622 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:25:03.624 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:25:03.953 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:03.954 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:03.955 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:03.957 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:03.957 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:25:03.959 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:25:04.128 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:04.128 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:04.129 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:04.130 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:04.131 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:25:04.135 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:25:11.651 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:11.652 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:11.653 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:11.654 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:11.654 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 10(Integer), 10(Integer)
+2019-10-22 21:25:11.657 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:25:12.079 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:12.079 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:12.080 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:12.081 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:12.082 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 20(Integer), 10(Integer)
+2019-10-22 21:25:12.088 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 4
+2019-10-22 21:25:12.849 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:12.850 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:12.851 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:12.852 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:12.853 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 10(Integer), 10(Integer)
+2019-10-22 21:25:12.856 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:25:13.115 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:13.116 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:13.118 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:13.119 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:13.119 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:25:13.121 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:25:27.673 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:27.673 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:27.674 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:27.675 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:27.675 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:25:27.677 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:25:28.033 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:28.033 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:28.035 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:28.037 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:28.037 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:25:28.040 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:25:28.208 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:28.208 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:28.209 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:28.210 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:28.211 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:25:28.214 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:25:37.705 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:37.705 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:37.706 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:37.707 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:37.708 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:25:37.711 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:25:38.506 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:25:38.506 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:25:38.510 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:25:38.511 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:25:38.511 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:25:38.512 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:26:10.011 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:26:10.012 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: 二本(String)
+2019-10-22 21:26:10.017 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 0
+2019-10-22 21:26:10.018 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.book.mapper.ReaderTypeMapper.insert  : ==>  Preparing: insert into tb_readertype (id, name, number ) values (?, ?, ? ) 
+2019-10-22 21:26:10.019 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.book.mapper.ReaderTypeMapper.insert  : ==> Parameters: null, 二本(String), 2(Integer)
+2019-10-22 21:26:10.024 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.book.mapper.ReaderTypeMapper.insert  : <==    Updates: 1
+2019-10-22 21:26:11.370 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:26:11.370 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:26:11.371 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:26:11.372 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:26:11.372 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:26:11.374 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:26:23.286 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:26:23.287 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: 其他(String)
+2019-10-22 21:26:23.289 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 8
+2019-10-22 21:26:23.314 ERROR 4712 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8] with root cause
+
+org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:80) ~[mybatis-3.5.2.jar:3.5.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at com.sun.proxy.$Proxy58.selectOne(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy64.selectByName(Unknown Source) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at com.sun.proxy.$Proxy65.selectByName(Unknown Source) ~[na:na]
+	at com.ft.book.service.impl.ReaderTypeServiceImpl.save(ReaderTypeServiceImpl.java:40) ~[classes/:na]
+	at com.ft.book.controller.ReaderTypeController.save(ReaderTypeController.java:35) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2019-10-22 21:27:04.782 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:27:04.782 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:27:04.786 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:27:04.788 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:27:04.788 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:27:04.792 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:27:10.462 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:27:10.463 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: 学生(String)
+2019-10-22 21:27:10.465 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 8
+2019-10-22 21:27:10.466 ERROR 4712 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8] with root cause
+
+org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:80) ~[mybatis-3.5.2.jar:3.5.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at com.sun.proxy.$Proxy58.selectOne(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy64.selectByName(Unknown Source) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at com.sun.proxy.$Proxy65.selectByName(Unknown Source) ~[na:na]
+	at com.ft.book.service.impl.ReaderTypeServiceImpl.save(ReaderTypeServiceImpl.java:40) ~[classes/:na]
+	at com.ft.book.controller.ReaderTypeController.save(ReaderTypeController.java:35) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2019-10-22 21:27:25.640 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:27:25.641 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:27:25.642 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:27:25.644 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:27:25.644 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:27:25.646 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:27:31.023 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:27:31.023 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: 学生(String)
+2019-10-22 21:27:31.025 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 8
+2019-10-22 21:27:31.028 ERROR 4712 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8] with root cause
+
+org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:80) ~[mybatis-3.5.2.jar:3.5.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at com.sun.proxy.$Proxy58.selectOne(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy64.selectByName(Unknown Source) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at com.sun.proxy.$Proxy65.selectByName(Unknown Source) ~[na:na]
+	at com.ft.book.service.impl.ReaderTypeServiceImpl.save(ReaderTypeServiceImpl.java:40) ~[classes/:na]
+	at com.ft.book.controller.ReaderTypeController.save(ReaderTypeController.java:35) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2019-10-22 21:29:02.108 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:29:02.109 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:29:02.110 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:29:02.112 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:29:02.112 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:29:02.116 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:29:10.534 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:29:10.535 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: 学生(String)
+2019-10-22 21:29:10.537 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 8
+2019-10-22 21:29:10.540 ERROR 4712 --- [http-nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8] with root cause
+
+org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:80) ~[mybatis-3.5.2.jar:3.5.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at com.sun.proxy.$Proxy58.selectOne(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy64.selectByName(Unknown Source) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at com.sun.proxy.$Proxy65.selectByName(Unknown Source) ~[na:na]
+	at com.ft.book.service.impl.ReaderTypeServiceImpl.save(ReaderTypeServiceImpl.java:40) ~[classes/:na]
+	at com.ft.book.controller.ReaderTypeController.save(ReaderTypeController.java:35) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2019-10-22 21:29:34.085 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:29:34.086 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:29:34.087 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:29:34.088 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:29:34.089 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:29:34.091 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:29:43.188 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:29:43.188 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: 学生(String)
+2019-10-22 21:29:43.189 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 8
+2019-10-22 21:29:43.191 ERROR 4712 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8] with root cause
+
+org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:80) ~[mybatis-3.5.2.jar:3.5.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at com.sun.proxy.$Proxy58.selectOne(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy64.selectByName(Unknown Source) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at com.sun.proxy.$Proxy65.selectByName(Unknown Source) ~[na:na]
+	at com.ft.book.service.impl.ReaderTypeServiceImpl.save(ReaderTypeServiceImpl.java:40) ~[classes/:na]
+	at com.ft.book.controller.ReaderTypeController.save(ReaderTypeController.java:35) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2019-10-22 21:31:04.560 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:31:04.561 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: 学生(String)
+2019-10-22 21:31:04.562 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 8
+2019-10-22 21:31:04.563 ERROR 4712 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8] with root cause
+
+org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:80) ~[mybatis-3.5.2.jar:3.5.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at com.sun.proxy.$Proxy58.selectOne(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy64.selectByName(Unknown Source) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at com.sun.proxy.$Proxy65.selectByName(Unknown Source) ~[na:na]
+	at com.ft.book.service.impl.ReaderTypeServiceImpl.save(ReaderTypeServiceImpl.java:40) ~[classes/:na]
+	at com.ft.book.controller.ReaderTypeController.save(ReaderTypeController.java:35) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2019-10-22 21:31:21.060 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:31:21.062 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: 学生(String)
+2019-10-22 21:31:21.068 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 8
+2019-10-22 21:31:56.927 ERROR 4712 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8] with root cause
+
+org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 8
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:80) ~[mybatis-3.5.2.jar:3.5.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at com.sun.proxy.$Proxy58.selectOne(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy64.selectByName(Unknown Source) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at com.sun.proxy.$Proxy65.selectByName(Unknown Source) ~[na:na]
+	at com.ft.book.service.impl.ReaderTypeServiceImpl.save(ReaderTypeServiceImpl.java:40) ~[classes/:na]
+	at com.ft.book.controller.ReaderTypeController.save(ReaderTypeController.java:35) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2019-10-22 21:32:04.832 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:32:04.833 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: qw(String)
+2019-10-22 21:32:04.836 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 0
+2019-10-22 21:32:04.837 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.book.mapper.ReaderTypeMapper.insert  : ==>  Preparing: insert into tb_readertype (id, name, number ) values (?, ?, ? ) 
+2019-10-22 21:32:04.837 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.book.mapper.ReaderTypeMapper.insert  : ==> Parameters: null, qw(String), 23(Integer)
+2019-10-22 21:32:04.850 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.book.mapper.ReaderTypeMapper.insert  : <==    Updates: 1
+2019-10-22 21:32:07.302 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:32:07.303 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:32:07.304 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:32:07.304 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:32:07.305 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:32:07.306 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:32:16.632 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:32:16.633 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: qw(String)
+2019-10-22 21:32:16.638 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 1
+2019-10-22 21:32:19.344 ERROR 4712 --- [http-nio-8080-exec-8] c.f.b.s.impl.ReaderTypeServiceImpl       : 读者类型已经存在！
+2019-10-22 21:34:25.282 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:34:25.282 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:34:25.283 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:34:25.285 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:34:25.286 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:34:25.293 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:34:31.405 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:34:31.405 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: qw(String)
+2019-10-22 21:34:31.407 DEBUG 4712 --- [http-nio-8080-exec-6] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 1
+2019-10-22 21:34:31.408 ERROR 4712 --- [http-nio-8080-exec-6] c.f.b.s.impl.ReaderTypeServiceImpl       : 读者类型已经存在！
+2019-10-22 21:34:44.416 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:34:44.417 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: qw(String)
+2019-10-22 21:34:44.422 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 1
+2019-10-22 21:34:46.374 ERROR 4712 --- [http-nio-8080-exec-2] c.f.b.s.impl.ReaderTypeServiceImpl       : 读者类型已经存在！
+2019-10-22 21:35:14.158 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.selectByName    : ==>  Preparing: select id, name, number from tb_readertype where 1=1 AND name =? 
+2019-10-22 21:35:14.158 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.selectByName    : ==> Parameters: qw1(String)
+2019-10-22 21:35:14.159 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.selectByName    : <==      Total: 0
+2019-10-22 21:35:14.160 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.book.mapper.ReaderTypeMapper.insert  : ==>  Preparing: insert into tb_readertype (id, name, number ) values (?, ?, ? ) 
+2019-10-22 21:35:14.161 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.book.mapper.ReaderTypeMapper.insert  : ==> Parameters: null, qw1(String), 4(Integer)
+2019-10-22 21:35:14.166 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.book.mapper.ReaderTypeMapper.insert  : <==    Updates: 1
+2019-10-22 21:35:15.128 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:35:15.128 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:35:15.129 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:35:15.130 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:35:15.130 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:35:15.131 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:43:05.464 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:43:05.464 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:43:05.466 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:43:05.467 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:43:05.467 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:43:05.469 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:43:17.411 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:43:17.412 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:43:17.414 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:43:17.415 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:43:17.415 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:43:17.417 DEBUG 4712 --- [http-nio-8080-exec-9] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:44:28.639 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:44:28.639 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:44:28.640 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:44:28.641 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:44:28.641 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:44:28.643 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:44:39.963 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:44:39.963 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:44:39.965 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:44:39.966 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:44:39.967 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:44:39.970 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:46:37.078 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:46:37.078 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:46:37.079 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:46:37.081 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:46:37.081 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:46:37.082 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:46:54.826 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:46:54.827 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:46:54.828 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:46:54.829 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:46:54.830 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:46:54.833 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:47:19.977 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:47:19.977 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:47:19.981 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:47:19.982 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:47:19.983 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:47:19.986 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:48:02.068 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:48:02.068 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:48:02.069 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:48:02.070 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:48:02.071 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:48:02.072 DEBUG 4712 --- [http-nio-8080-exec-5] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:50:07.250 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:50:07.251 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:50:07.251 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:50:07.253 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:50:07.253 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:50:07.254 DEBUG 4712 --- [http-nio-8080-exec-3] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:51:12.632 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:51:12.633 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:51:12.634 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:51:12.635 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:51:12.636 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:51:12.639 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 21:51:53.021 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 21:51:53.022 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 21:51:53.023 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 21:51:53.024 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 21:51:53.024 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 21:51:53.026 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 22:00:09.215 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 22:00:09.215 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 22:00:09.216 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 22:00:09.217 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 22:00:09.217 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 22:00:09.218 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 22:06:32.770 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 22:06:32.770 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 22:06:32.774 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 22:06:32.776 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 22:06:32.776 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 22:06:32.779 DEBUG 4712 --- [http-nio-8080-exec-1] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 22:07:20.286 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 22:07:20.287 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 22:07:20.287 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 22:07:20.288 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 22:07:20.288 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 22:07:20.289 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 22:09:08.073 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 22:09:08.074 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 22:09:08.075 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 22:09:08.076 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 22:09:08.076 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 22:09:08.078 DEBUG 4712 --- [http-nio-8080-exec-10] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 22:14:44.864 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 22:14:44.864 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 22:14:44.865 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 22:14:44.866 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 22:14:44.867 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 22:14:44.868 DEBUG 4712 --- [http-nio-8080-exec-8] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 22:15:56.658 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 22:15:56.658 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 22:15:56.659 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 22:15:56.660 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 22:15:56.660 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 22:15:56.662 DEBUG 4712 --- [http-nio-8080-exec-4] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 22:22:21.834 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 22:22:21.835 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 22:22:21.836 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 22:22:21.838 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 22:22:21.838 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 22:22:21.840 DEBUG 4712 --- [http-nio-8080-exec-7] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10
+2019-10-22 22:23:19.315 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.R.findPageList_COUNT             : ==>  Preparing: SELECT count(0) FROM tb_readertype WHERE 1 = 1 
+2019-10-22 22:23:19.316 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.R.findPageList_COUNT             : ==> Parameters: 
+2019-10-22 22:23:19.317 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.R.findPageList_COUNT             : <==      Total: 1
+2019-10-22 22:23:19.319 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.ReaderTypeMapper.findPageList    : ==>  Preparing: SELECT id, NAME, number FROM tb_readertype WHERE 1=1 limit ?,? 
+2019-10-22 22:23:19.319 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.ReaderTypeMapper.findPageList    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-22 22:23:19.320 DEBUG 4712 --- [http-nio-8080-exec-2] c.f.b.m.ReaderTypeMapper.findPageList    : <==      Total: 10

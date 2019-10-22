@@ -57,8 +57,10 @@ layui.use(['table', 'laypage','jquery'], function(){
                 } else if(data.length > 1){
                     layer.msg('只能同时编辑一个');
                 } else {
-                    edit(checkStatus.data[0].id);
-                    layer.alert('编辑 [id]：'+ checkStatus.data[0].id);
+                    var id=checkStatus.data[0].id;
+                    var name=checkStatus.data[0].name;
+                    var number=checkStatus.data[0].number;
+                    edit(id,name,number);
                 }
                 break;
             case 'delete':
@@ -87,7 +89,7 @@ layui.use(['table', 'laypage','jquery'], function(){
     }
 
     //编辑
-    function edit(id) {
+    function edit(id,name,number) {
         //页面层
         layer.open({
             type : 2,
@@ -96,8 +98,14 @@ layui.use(['table', 'laypage','jquery'], function(){
             offset: '100px',
             title : '类型修改',
             area : [ '465px', '250px' ],
+            // btn: ['确认', '取消'],
             fix : false,
-            content : 'dzlxgl_update.html'
+            content : 'dzlxgl_update.html',
+            success:function (layero,index) {
+                var iframeWin = window[layero.find('iframe')[0]['name']];
+                //调用子页面方法
+                iframeWin.init(name,number);
+            }
         });
     }
 });

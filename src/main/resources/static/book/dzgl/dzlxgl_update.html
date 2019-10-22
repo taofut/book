@@ -17,14 +17,14 @@
     <div class="layui-form-item">
         <label class="layui-form-label">类型名称：</label>
         <div class="layui-input-block">
-            <input type="text" name="name" lay-verify="required" lay-reqtext="类型名称不能为空！" autocomplete="off" class="layui-input">
+            <input type="text" id="typeName" name="name" lay-verify="required" lay-reqtext="类型名称不能为空！" autocomplete="off" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
         <div class="layui-inline">
             <label class="layui-form-label">可借数量：</label>
             <div class="layui-input-block">
-                <input type="text" name="number" lay-verify="required|number" lay-reqtext="可借数量不能为空！" autocomplete="off" class="layui-input">
+                <input type="text" id="number" name="number" lay-verify="required|number" lay-reqtext="可借数量不能为空！" autocomplete="off" class="layui-input">
             </div>
         </div>
         （本）
@@ -32,8 +32,8 @@
 
     <div class="layui-form-item">
         <div class="layui-input-block">
-            <button type="submit" class="layui-btn" lay-submit="" lay-filter="save">提交</button>
-            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            <button type="submit" class="layui-btn" lay-submit="" lay-filter="save">保存</button>
+            <button type="button" class="layui-btn layui-btn-primary" id="btn_cancel">取消</button>
         </div>
     </div>
 </form>

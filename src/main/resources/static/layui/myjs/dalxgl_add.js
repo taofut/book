@@ -16,10 +16,12 @@ layui.use(['form','jquery'], function(){
                         //刷新表格
                         window.parent.location.reload();
                     });
+                }else{
+                    layer.alert(res.msg);
                 }
-                if(res.status == 500){
-                    layer.alert();
-                }
+            },
+            error:function () {
+                layer.alert("操作失败！");
             }
         });
         return false;
