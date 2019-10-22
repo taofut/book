@@ -11,11 +11,8 @@ layui.use(['form','jquery'], function(){
             success: function (res) {
                 if (res.status == 200) {
                     layer.alert("操作成功！", function () {
-                        //刷新表格
-                        $("#btn_search").click();
                         var index = parent.layer.getFrameIndex(window.name);
                         parent.layer.close(index);//关闭当前页
-
                     });
                 }
             }

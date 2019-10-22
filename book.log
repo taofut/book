@@ -1,0 +1,33 @@
+2019-10-22 13:18:23.062  INFO 2384 --- [main] com.ft.BookApplication                   : Starting BookApplication on 0201204019-PC with PID 2384 (D:\develop\fut\task\book\book\target\classes started by fut in D:\develop\fut\task\book\book)
+2019-10-22 13:18:23.075  INFO 2384 --- [main] com.ft.BookApplication                   : No active profile set, falling back to default profiles: default
+2019-10-22 13:18:26.183  INFO 2384 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-22 13:18:26.247  INFO 2384 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-22 13:18:26.247  INFO 2384 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-10-22 13:18:26.424  INFO 2384 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-22 13:18:26.424  INFO 2384 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3199 ms
+2019-10-22 13:18:26.545  INFO 2384 --- [main] com.ft.conf.DataSourceConfiguration      : 正在初始化数据源{spring.datasource}
+2019-10-22 13:18:27.663  INFO 2384 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-22 13:18:28.150  INFO 2384 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-22 13:18:28.153  INFO 2384 --- [main] com.ft.BookApplication                   : Started BookApplication in 6.227 seconds (JVM running for 8.073)
+2019-10-22 13:19:25.153  INFO 2164 --- [main] com.ft.BookApplication                   : Starting BookApplication on 0201204019-PC with PID 2164 (D:\develop\fut\task\book\book\target\classes started by fut in D:\develop\fut\task\book\book)
+2019-10-22 13:19:25.156  INFO 2164 --- [main] com.ft.BookApplication                   : No active profile set, falling back to default profiles: default
+2019-10-22 13:19:26.838  INFO 2164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-22 13:19:26.860  INFO 2164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-22 13:19:26.861  INFO 2164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-10-22 13:19:26.958  INFO 2164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-22 13:19:26.959  INFO 2164 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1763 ms
+2019-10-22 13:19:27.014  INFO 2164 --- [main] com.ft.conf.DataSourceConfiguration      : 正在初始化数据源{spring.datasource}
+2019-10-22 13:19:27.398  INFO 2164 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-22 13:19:27.585  INFO 2164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-22 13:19:27.683  INFO 2164 --- [main] com.ft.BookApplication                   : Started BookApplication in 2.974 seconds (JVM running for 3.607)
+2019-10-22 13:36:36.801  INFO 9604 --- [main] com.ft.BookApplication                   : Starting BookApplication on 0201204019-PC with PID 9604 (D:\develop\fut\task\book\book\target\classes started by fut in D:\develop\fut\task\book\book)
+2019-10-22 13:36:36.805  INFO 9604 --- [main] com.ft.BookApplication                   : No active profile set, falling back to default profiles: default
+2019-10-22 13:36:38.951  INFO 9604 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-22 13:36:38.976  INFO 9604 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-22 13:36:38.977  INFO 9604 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-10-22 13:36:39.082  INFO 9604 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-22 13:36:39.083  INFO 9604 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2230 ms
+2019-10-22 13:36:39.151  INFO 9604 --- [main] com.ft.conf.DataSourceConfiguration      : 正在初始化数据源{spring.datasource}
+2019-10-22 13:36:39.604  INFO 9604 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-22 13:36:39.926  INFO 9604 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-22 13:36:39.930  INFO 9604 --- [main] com.ft.BookApplication                   : Started BookApplication in 3.686 seconds (JVM running for 4.336)

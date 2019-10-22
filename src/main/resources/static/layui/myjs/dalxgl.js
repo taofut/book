@@ -57,6 +57,7 @@ layui.use(['table', 'laypage','jquery'], function(){
                 } else if(data.length > 1){
                     layer.msg('只能同时编辑一个');
                 } else {
+                    edit(checkStatus.data[0].id);
                     layer.alert('编辑 [id]：'+ checkStatus.data[0].id);
                 }
                 break;
@@ -75,12 +76,35 @@ layui.use(['table', 'laypage','jquery'], function(){
         //页面层
         layer.open({
             type : 2,
+            anim: 1,
+            resize:false,
             offset: '100px',
             title : '类型添加',
             area : [ '465px', '250px' ],
             fix : false,
             content : 'dzlxgl_add.html',
-            end : function() {
+            end: function(){
+                //刷新表格
+                // $("#btn_search").click();
+            }
+        });
+    }
+
+    //编辑
+    function edit(id) {
+        //页面层
+        layer.open({
+            type : 2,
+            anim: 1,
+            resize:false,
+            offset: '100px',
+            title : '类型修改',
+            area : [ '465px', '250px' ],
+            fix : false,
+            content : 'dzlxgl_update.html',
+            end: function(){
+                //刷新表格
+                // $("#btn_search").click();
             }
         });
     }
