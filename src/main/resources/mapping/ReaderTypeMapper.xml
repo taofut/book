@@ -20,6 +20,13 @@
     </if>
   </select>
 
+  <select id="selectByName" parameterType="String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from tb_readertype where 1=1
+    AND name =#{name,jdbcType=VARCHAR}
+  </select>
+
   <sql id="Base_Column_List" >
     id, name, number
   </sql>

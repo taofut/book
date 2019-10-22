@@ -6,6 +6,7 @@ import com.ft.book.bean.ReaderType;
 import com.ft.book.mapper.ReaderTypeMapper;
 import com.ft.book.service.ReaderTypeService;
 import com.ft.book.utils.BookResult;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ import java.util.Map;
  * Motto:  Work conscientiously and be a practical man.
  */
 @Service
+@Slf4j
 public class ReaderTypeServiceImpl implements ReaderTypeService {
 
     @Autowired
@@ -35,7 +37,12 @@ public class ReaderTypeServiceImpl implements ReaderTypeService {
     @Override
     public BookResult save(ReaderType readerType) {
         try {
-            readerTypeMapper.insert(readerType);
+            ReaderType rt = readerTypeMapper.selectByName(readerType.getName());
+            if (rt != null) {
+                log.error("读者类型已经存在！");
+                return BookResult.build(500, "读者类型已经存在！");
+            }
+            this.readerTypeMapper.insert(readerType);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

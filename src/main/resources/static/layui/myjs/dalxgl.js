@@ -82,11 +82,7 @@ layui.use(['table', 'laypage','jquery'], function(){
             title : '类型添加',
             area : [ '465px', '250px' ],
             fix : false,
-            content : 'dzlxgl_add.html',
-            end: function(){
-                //刷新表格
-                // $("#btn_search").click();
-            }
+            content : 'dzlxgl_add.html'
         });
     }
 
@@ -101,11 +97,7 @@ layui.use(['table', 'laypage','jquery'], function(){
             title : '类型修改',
             area : [ '465px', '250px' ],
             fix : false,
-            content : 'dzlxgl_update.html',
-            end: function(){
-                //刷新表格
-                // $("#btn_search").click();
-            }
+            content : 'dzlxgl_update.html'
         });
     }
 });
