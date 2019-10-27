@@ -1,11 +1,12 @@
 package com.ft.book.bean;
 
+import com.ft.base.bean.BaseBean;
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
-public class ReaderInfo {
+public class ReaderInfo extends BaseBean{
     private Integer id;
 
     private String name;

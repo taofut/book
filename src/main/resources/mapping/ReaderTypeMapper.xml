@@ -5,13 +5,13 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="number" property="number" jdbcType="INTEGER" />
+    <result column="createTime" property="create_time" jdbcType="TIMESTAMP" />
+    <result column="updateTime" property="update_time" jdbcType="TIMESTAMP" />
   </resultMap>
 
   <select id="findPageList" resultMap="BaseResultMap" parameterType="Map">
     SELECT
-    id,
-    NAME,
-    number
+    <include refid="Base_Column_List"/>
     FROM
     tb_readertype
     WHERE 1=1
@@ -28,7 +28,7 @@
   </select>
 
   <sql id="Base_Column_List" >
-    id, name, number
+    id, name, number,create_time,update_time
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -41,9 +41,13 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.ft.book.bean.ReaderType" >
-    insert into tb_readertype (id, name, number
+    insert into tb_readertype (id, name, number,create_time,update_time
       )
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}
+    values (#{id,jdbcType=INTEGER},
+          #{name,jdbcType=VARCHAR},
+          #{number,jdbcType=INTEGER},
+          #{createTime,jdbcType=TIMESTAMP},
+          #{updateTime,jdbcType=TIMESTAMP}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.ft.book.bean.ReaderType" >
@@ -86,7 +90,8 @@
   <update id="updateByPrimaryKey" parameterType="com.ft.book.bean.ReaderType" >
     update tb_readertype
     set name = #{name,jdbcType=VARCHAR},
-      number = #{number,jdbcType=INTEGER}
+      number = #{number,jdbcType=INTEGER},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

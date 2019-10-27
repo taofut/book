@@ -1,8 +1,9 @@
-package com.ft.book.bean;
+package com.ft.base.bean;
 
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Author: fut
@@ -12,11 +13,8 @@ import java.io.Serializable;
 @Data
 public class BaseBean implements Serializable {
     private static final long serialVersionUID = -3047971221154628028L;
-    private String isDelete;
-    public String pageSize;
-    public String pageIndex;
-    public String synQuery;
-    public String loadRowCount;
-    public String sortField;
-    public String sortOrder;
+
+    private Date createTime;
+    private Date updateTime;
+
 }

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
+import java.util.Date;
 import java.util.Map;
 
 /**
@@ -29,9 +31,20 @@ public class ReaderTypeController {
         return readerTypeService.findPageList(params);
     }
 
-    @RequestMapping("/save")
-    public BookResult save(@RequestParam Map<String, Object> params) {
+    @RequestMapping("/save_add")
+    public BookResult saveAdd(@RequestParam Map<String, Object> params) {
         ReaderType readerType = JSON.parseObject((String) params.get("json"), ReaderType.class);
         return readerTypeService.save(readerType);
+    }
+
+    @RequestMapping("/save_update")
+    public BookResult saveUpdate(@RequestParam Map<String, Object> params) {
+        ReaderType readerType = JSON.parseObject((String) params.get("json"), ReaderType.class);
+        return readerTypeService.update(readerType);
+    }
+
+    @RequestMapping("/save_del")
+    public BookResult saveDel(Integer[] ids) {
+        return readerTypeService.delete(Arrays.asList(ids));
     }
 }

@@ -67,7 +67,14 @@ layui.use(['table', 'laypage','jquery'], function(){
                 if(data.length === 0){
                     layer.msg('请选择一行');
                 } else {
-                    layer.msg('删除');
+                    layer.confirm('确定删除吗？', {
+                        btn: ['确定','取消'] //按钮
+                    }, function(index){
+                        var res=checkStatus.data;
+                        del(res);
+                    }, function(){
+                        //取消事件
+                    });
                 }
                 break;
         };
@@ -77,34 +84,64 @@ layui.use(['table', 'laypage','jquery'], function(){
     function add() {
         //页面层
         layer.open({
-            type : 2,
+            type: 2,
             anim: 1,
-            resize:false,
+            resize: false,
             offset: '100px',
-            title : '类型添加',
-            area : [ '465px', '250px' ],
-            fix : false,
-            content : 'dzlxgl_add.html'
+            title: '类型添加',
+            area: ['465px', '250px'],
+            fix: false,
+            content: 'dzlxgl_add.html'
         });
     }
 
     //编辑
-    function edit(id,name,number) {
+    function edit(id, name, number) {
         //页面层
         layer.open({
-            type : 2,
+            type: 2,
             anim: 1,
-            resize:false,
+            resize: false,
             offset: '100px',
-            title : '类型修改',
-            area : [ '465px', '250px' ],
+            title: '类型修改',
+            area: ['465px', '250px'],
             // btn: ['确认', '取消'],
-            fix : false,
-            content : 'dzlxgl_update.html',
-            success:function (layero,index) {
+            fix: false,
+            content: 'dzlxgl_update.html',
+            success: function (layero, index) {
                 var iframeWin = window[layero.find('iframe')[0]['name']];
                 //调用子页面方法
-                iframeWin.init(name,number);
+                iframeWin.init(id, name, number);
+            }
+        });
+    }
+
+    /**
+     * 删除
+     * @param res
+     */
+    function del(res) {
+        var ids = [];
+        for (var i = 0; i < res.length; i++) {
+            ids.push(res[i].id);
+        }
+
+        $.ajax({
+            url: "/readerType/save_del",
+            data: {"ids": ids.join(",")},
+            type: "post",
+            success: function (res) {
+                if (res.status == 200) {
+                    layer.alert("操作成功！", function () {
+                        //刷新表格
+                        window.location.reload();
+                    });
+                } else {
+                    layer.alert(res.msg);
+                }
+            },
+            error: function () {
+                layer.alert("操作失败！");
             }
         });
     }

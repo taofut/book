@@ -4,6 +4,7 @@ import com.ft.base.bean.PagerBean;
 import com.ft.book.bean.ReaderType;
 import com.ft.book.utils.BookResult;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,4 +17,8 @@ public interface ReaderTypeService {
     PagerBean findPageList(Map<String, Object> params);
 
     BookResult save(ReaderType readerType);
+
+    BookResult update(ReaderType readerType);
+
+    BookResult delete(List<Integer> ids);
 }

@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -42,8 +43,36 @@ public class ReaderTypeServiceImpl implements ReaderTypeService {
                 log.error("读者类型已经存在！");
                 return BookResult.build(500, "读者类型已经存在！");
             }
+            readerType.setCreateTime(new Date());
+            readerType.setUpdateTime(new Date());
             this.readerTypeMapper.insert(readerType);
         } catch (Exception e) {
+            log.error("读者类型添加失败！");
+            throw new RuntimeException(e);
+        }
+        return BookResult.ok();
+    }
+
+    @Override
+    public BookResult update(ReaderType readerType) {
+        try {
+            readerType.setUpdateTime(new Date());
+            readerTypeMapper.updateByPrimaryKey(readerType);
+        } catch (Exception e) {
+            log.error("读者类型更新失败！");
+            throw new RuntimeException(e);
+        }
+        return BookResult.ok();
+    }
+
+    @Override
+    public BookResult delete(List<Integer> ids) {
+        try {
+            for(Integer id:ids){
+                readerTypeMapper.deleteByPrimaryKey(id);
+            }
+        } catch (Exception e) {
+            log.error("读者类型删除失败！");
             throw new RuntimeException(e);
         }
         return BookResult.ok();

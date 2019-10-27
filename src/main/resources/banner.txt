@@ -6,3 +6,4 @@ ___________              _____       __
   |____|  (____  /\____/|__| |____/ |__|
                \/
 ${spring-boot.version}
+${AnsiColor.BRIGHT_WHITE}

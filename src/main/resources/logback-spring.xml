@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<configuration>
+    <!--配置控制台日志输出格式-->
+    <appender name="consolelog" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                %d - %msg%n
+            </pattern>
+        </layout>
+    </appender>
+
+    <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>
+                %msg%n
+            </pattern>
+        </encoder>
+        <!--滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--路径-->
+            <fileNamePattern>
+                ${LOG_PATH}/${LOG_FILE}
+            </fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <!--指定在root info级别下使用该配置-->
+    <root level="info">
+        <appender-ref ref="consolelog" />
+        <appender-ref ref="fileInfoLog" />
+    </root>
+</configuration>

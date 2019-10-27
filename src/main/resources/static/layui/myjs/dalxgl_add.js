@@ -1,12 +1,12 @@
-layui.use(['form','jquery'], function(){
+layui.use(['form', 'jquery'], function () {
     var form = layui.form;
     var $ = layui.$;
     //监听提交
-    form.on('submit(save)', function(data){
-        var json=JSON.stringify(data.field);
+    form.on('submit(save_add)', function (data) {
+        var json = JSON.stringify(data.field);
         $.ajax({
-            url: "/readerType/save",
-            data: {"json":json},
+            url: "/readerType/save_add",
+            data: {"json": json},
             type: "post",
             success: function (res) {
                 if (res.status == 200) {
@@ -16,14 +16,22 @@ layui.use(['form','jquery'], function(){
                         //刷新表格
                         window.parent.location.reload();
                     });
-                }else{
+                } else {
                     layer.alert(res.msg);
                 }
             },
-            error:function () {
+            error: function () {
                 layer.alert("操作失败！");
             }
         });
         return false;
     });
+
+    //禁用回车事件
+    document.onkeydown = function (ev) {
+        var event = ev || event;
+        if (event.keyCode == 13) {
+            return false;
+        }
+    }
 });
