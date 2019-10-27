@@ -22,18 +22,18 @@ function init(id,name,number) {
                 type: "post",
                 success: function (res) {
                     if (res.status == 200) {
-                        layer.alert("操作成功！", function () {
+                        layer.alert("操作成功！",{icon: 1}, function () {
                             //关闭窗口
                             layer.close(layer.index);
                             //刷新表格
                             window.parent.location.reload();
                         });
                     }else{
-                        layer.alert(res.msg);
+                        layer.alert(res.msg,{icon: 5});
                     }
                 },
                 error:function () {
-                    layer.alert("操作失败！");
+                    layer.alert("操作失败！",{icon: 5});
                 }
             });
             return false;

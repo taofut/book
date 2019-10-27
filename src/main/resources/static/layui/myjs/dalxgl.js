@@ -132,16 +132,16 @@ layui.use(['table', 'laypage','jquery'], function(){
             type: "post",
             success: function (res) {
                 if (res.status == 200) {
-                    layer.alert("操作成功！", function () {
+                    layer.alert("操作成功！",{icon: 1}, function () {
                         //刷新表格
                         window.location.reload();
                     });
                 } else {
-                    layer.alert(res.msg);
+                    layer.alert(res.msg,{icon: 5});
                 }
             },
             error: function () {
-                layer.alert("操作失败！");
+                layer.alert("操作失败！",{icon: 5});
             }
         });
     }

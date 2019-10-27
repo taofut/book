@@ -11,11 +11,11 @@ layui.use(['layer', 'jquery'], function () {
             var menuTree = $("#menuTree");
             var menuHtml = '<div class="layui-side-scroll"><ul class="layui-nav layui-nav-tree" lay-filter="test">';
             for (var i = 0; i < json.data.length; i++) {
-                menuHtml += '<li class="layui-nav-item"><a class="" href="javascript:;">' + json.data[i].name + '</a>';
+                menuHtml += '<li class="layui-nav-item"><a class="" href="javascript:;"><i class="layui-icon layui-icon-file" style="font-size: 16px; color: #009688;"></i>&nbsp;' + json.data[i].name + '</a>';
                 if (json.data[i].nodeType == "GROUP") {
                     menuHtml += '<dl class="layui-nav-child">';
                     for (var j = 0; j < json.data[i].children.length; j++) {
-                        menuHtml += '<dd><a href="javascript:;" data-id="' + json.data[i].children[j].nodeId + '" data-title="' + json.data[i].children[j].name + '" data-url="' + json.data[i].children[j].url + '" class="site-demo-active" data-type="tabAdd">' + json.data[i].children[j].name + '</a></dd>';
+                        menuHtml += '<dd><a href="javascript:;" data-id="' + json.data[i].children[j].nodeId + '" data-title="' + json.data[i].children[j].name + '" data-url="' + json.data[i].children[j].url + '" class="site-demo-active" data-type="tabAdd"><i class="layui-icon layui-icon-list" style="font-size: 17px; color: #009688;"></i>&nbsp;' + json.data[i].children[j].name + '</a></dd>';
                     }
                     menuHtml += '</dl>';
                 }
