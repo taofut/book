@@ -2,21 +2,51 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>layui</title>
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../layui/css/layui.css" media="all">
+    <title>读者档案管理</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <style type="text/css">
+        .layui-form-item {
+            margin-bottom: 0px;
+        }
+    </style>
 </head>
 <body>
-读者档案管理
 
-<script src="../layui/layui.js" charset="utf-8"></script>
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
-<script type="text/javascript">
+<div class="layui-form-item">
+    <div class="layui-inline">
+        <label class="layui-form-label" style="width: auto">条形码：</label>
+        <div class="layui-input-inline">
+            <input type="text" name="barcode" id="barcode" class="layui-input">
+        </div>
+        <label class="layui-form-label" style="width: auto">姓名：</label>
+        <div class="layui-input-inline">
+            <input type="text" name="name" id="name" class="layui-input">
+        </div>
+        <label class="layui-form-label" style="width: auto">证件号码：</label>
+        <div class="layui-input-inline">
+            <input type="text" name="paperNO" id="paperNO" class="layui-input">
+        </div>
+        <button class="layui-btn" id="btn_search">
+            <!--<i class="layui-icon layui-icon-search"></i>-->
+            搜索
+        </button>
+        <button class="layui-btn" id="btn_reset">
+            重置
+        </button>
+    </div>
 
-</script>
-</body>
-</html>
+</div>
+
+<!--tab标签-->
+<div class="layui-tab" lay-filter="dzdagl" lay-allowclose="true" style="margin-left: 200px;">
+
+</div>
+
+<div>
+    <table id="readInfo" lay-filter="readInfo_toolbar"></table>
+</div>
+
+<script src="../../layui/layui.js" charset="utf-8"></script>
+<script src="../../layui/myjs/dzdagl.js"></script>
 </body>
 </html>

@@ -23,6 +23,47 @@
     id, name, sex, barcode, vocation, birthday, paperType, paperNO, tel, email, createDate, 
     operator, remark, typeid, create_time, update_time
   </sql>
+
+  <select id="findPageList" resultType="Map" parameterType="Map">
+    SELECT
+    a.id,
+    a.name,
+    a.sex,
+    b.name typeName,
+    a.barcode,
+    a.vocation,
+    a.birthday,
+    a.paperType,
+    a.paperNO,
+    a.tel,
+    a.email,
+    a.createDate,
+    a.operator,
+    a.remark,
+    a.typeid,
+    a.create_time,
+    a.update_time
+    FROM
+    tb_reader a LEFT JOIN tb_readertype b ON a.typeid=b.id
+    WHERE 1=1
+    <if test="barcode != null and barcode != ''">
+      AND a.barcode LIKE '%' #{barcode,jdbcType=VARCHAR} '%'
+    </if>
+    <if test="readName != null and readName != ''">
+      AND a.name LIKE '%' #{readName,jdbcType=VARCHAR} '%'
+    </if>
+    <if test="paperNO != null and paperNO != ''">
+      AND a.paperNO LIKE '%' #{paperNO,jdbcType=VARCHAR} '%'
+    </if>
+  </select>
+
+  <select id="selectByBarcode" parameterType="String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from tb_reader where 1=1
+    AND barcode =#{barcode,jdbcType=VARCHAR}
+  </select>
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />

@@ -20,6 +20,13 @@
     </if>
   </select>
 
+  <select id="findReaderType" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List"/>
+    FROM
+    tb_readertype
+  </select>
+
   <select id="selectByName" parameterType="String" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>

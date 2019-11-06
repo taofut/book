@@ -26,4 +26,6 @@ public interface ReaderTypeMapper {
     int updateByPrimaryKey(ReaderType record);
 
     ReaderType selectByName(String name);
+
+    List<ReaderType> findReaderType();
 }

@@ -21,4 +21,6 @@ public interface ReaderTypeService {
     BookResult update(ReaderType readerType);
 
     BookResult delete(List<Integer> ids);
+
+    List<ReaderType> findReaderType();
 }

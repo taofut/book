@@ -45,7 +45,7 @@ public class ReaderTypeServiceImpl implements ReaderTypeService {
             }
             readerType.setCreateTime(new Date());
             readerType.setUpdateTime(new Date());
-            this.readerTypeMapper.insert(readerType);
+            readerTypeMapper.insert(readerType);
         } catch (Exception e) {
             log.error("读者类型添加失败！");
             throw new RuntimeException(e);
@@ -76,5 +76,10 @@ public class ReaderTypeServiceImpl implements ReaderTypeService {
             throw new RuntimeException(e);
         }
         return BookResult.ok();
+    }
+
+    @Override
+    public List<ReaderType> findReaderType() {
+        return readerTypeMapper.findReaderType();
     }
 }
