@@ -6,7 +6,7 @@ layui.use(['table', 'laypage','jquery'], function(){
     table.render({
         elem: '#readType'
         ,height: 400
-        ,url: '/readerType/queryReaderType' //数据接口
+        ,url: '/book/readerType/queryReaderType' //数据接口
         ,page: true //开启分页
         ,toolbar: 'default'
 //            ,page: {
@@ -127,7 +127,7 @@ layui.use(['table', 'laypage','jquery'], function(){
         }
 
         $.ajax({
-            url: "/readerType/save_del",
+            url: "/book/readerType/save_del",
             data: {"ids": ids.join(",")},
             type: "post",
             success: function (res) {

@@ -17,7 +17,7 @@ function init(id,name,number) {
         form.on('submit(save_update)', function(data){
             var json=JSON.stringify(data.field);
             $.ajax({
-                url: "/readerType/save_update",
+                url: "/book/readerType/save_update",
                 data: {"json":json},
                 type: "post",
                 success: function (res) {

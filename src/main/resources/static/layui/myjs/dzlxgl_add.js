@@ -5,7 +5,7 @@ layui.use(['form', 'jquery'], function () {
     form.on('submit(save_add)', function (data) {
         var json = JSON.stringify(data.field);
         $.ajax({
-            url: "/readerType/save_add",
+            url: "/book/readerType/save_add",
             data: {"json": json},
             type: "post",
             success: function (res) {

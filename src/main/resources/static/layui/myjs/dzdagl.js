@@ -5,7 +5,7 @@ layui.use(['table', 'laypage','jquery'], function(){
     table.render({
         elem: '#readInfo'
         ,height: 400
-        ,url: '/readerInfo/queryReaderInfo' //数据接口
+        ,url: '/book/readerInfo/queryReaderInfo' //数据接口
         ,page: true //开启分页
         ,toolbar: 'default'
         ,cols: [[ //表头
@@ -14,10 +14,11 @@ layui.use(['table', 'laypage','jquery'], function(){
             ,{field: 'barcode',title: '条形码', align:'center',style:'text-align:left',width:'15%'}
             ,{field: 'name', title: '姓名', align:'center',style:'text-align:left',width:'10%'}
             ,{field: 'typeName', title: '读者类型', align:'center',style:'text-align:left', width:'10%'}
-            ,{field: 'paperType', title: '证件类型', align:'center',style:'text-align:left', width:'10%'}
+            // ,{field: 'paperType', title: '证件类型', align:'center',style:'text-align:left', width:'10%'}
             ,{field: 'paperNO', title: '证件号码', align:'center',style:'text-align:left', width:'15%'}
             ,{field: 'tel', title: '电话', align:'center',style:'text-align:left', width:'15%'}
             ,{field: 'email', title: 'Email', align:'center',style:'text-align:left', width:'15%'}
+            ,{field: 'createTime', title: '创建时间', align:'center',style:'text-align:left', width:'10%'}
         ]]
     });
 
@@ -99,3 +100,15 @@ layui.use(['table', 'laypage','jquery'], function(){
     }
 
 });
+
+//js获取项目根路径，如： http://localhost:8080/index/index.html
+// function getRootPath(){
+//     var curWwwPath=window.document.location.href;
+//     var pathName=window.document.location.pathname;
+//     var pos=curWwwPath.indexOf(pathName);
+//     //获取主机地址，如： http://localhost:7070
+//     var localhostPaht=curWwwPath.substring(0,pos);
+//     return localhostPaht;
+//     //alert(localhostPaht);
+//
+// }

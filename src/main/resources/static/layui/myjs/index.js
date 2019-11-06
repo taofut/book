@@ -3,7 +3,7 @@ layui.use(['layer', 'jquery'], function () {
     // var layer = layui.layer;
 
     $.ajax({
-        url: "/menu/getMenuTree",
+        url: "/book/menu/getMenuTree",
         data: "",
         type: "post",
         success: function (text) {

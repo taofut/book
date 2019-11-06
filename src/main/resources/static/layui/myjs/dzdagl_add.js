@@ -6,7 +6,7 @@ layui.use(['form','laydate', 'jquery'], function () {
     form.on('submit(save_add)', function (data) {
         var json = JSON.stringify(data.field);
         $.ajax({
-            url: "/readerInfo/save_add",
+            url: "/book/readerInfo/save_add",
             data: {"json": json},
             type: "post",
             success: function (res) {
@@ -43,7 +43,7 @@ layui.use(['form','laydate', 'jquery'], function () {
 
     //初始化读者类型-下拉菜单
     $.ajax({
-        url:'/readerInfo/reader_type',
+        url:'/book/readerInfo/reader_type',
         dataType:'json',
         type:'post',
         success:function(data){

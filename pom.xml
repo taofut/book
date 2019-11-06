@@ -14,11 +14,23 @@
 	<name>book</name>
 	<description>Demo project for Spring Boot</description>
 
+	<!--打war包时配置-->
+	<!--<packaging>war</packaging>-->
+
+	<packaging>jar</packaging>
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
+		<!--打war包时配置-->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+			<!--<scope>provided</scope>-->
+		<!--</dependency>-->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
@@ -83,6 +95,9 @@
 	</dependencies>
 
 	<build>
+		<!--打包后的包名-->
+		<finalName>book</finalName>
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
