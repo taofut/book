@@ -52,16 +52,17 @@
     <if test="readName != null and readName != ''">
       AND a.name LIKE '%' #{readName,jdbcType=VARCHAR} '%'
     </if>
-    <if test="paperNO != null and paperNO != ''">
-      AND a.paperNO LIKE '%' #{paperNO,jdbcType=VARCHAR} '%'
+    <if test="paperno != null and paperno != ''">
+      AND a.paperNO LIKE '%' #{paperno,jdbcType=VARCHAR} '%'
     </if>
+    GROUP BY a.update_time DESC
   </select>
 
-  <select id="selectByBarcode" parameterType="String" resultMap="BaseResultMap">
+  <select id="selectByPaperno" parameterType="String" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
     from tb_reader where 1=1
-    AND barcode =#{barcode,jdbcType=VARCHAR}
+    AND paperNO =#{paperno,jdbcType=VARCHAR}
   </select>
 
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >

@@ -23,5 +23,5 @@ public interface ReaderInfoMapper {
 
     int updateByPrimaryKey(ReaderInfo record);
 
-    ReaderInfo selectByBarcode(String barcode);
+    ReaderInfo selectByPaperno(String barcode);
 }

@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -41,9 +43,22 @@ public class ReaderInfoController {
         return readerInfoService.save(readerInfo);
     }
 
+    @RequestMapping("/save_update")
+    public BookResult saveUpdate(@RequestParam Map<String, Object> params) {
+        ReaderInfo readerInfo = JSON.parseObject((String) params.get("json"), ReaderInfo.class);
+        return readerInfoService.update(readerInfo);
+    }
+
     @RequestMapping(value = "reader_type", method = RequestMethod.POST)
     public List<ReaderType> findReaderType() {
         return readerTypeService.findReaderType();
+    }
+
+    @RequestMapping(value = "/initBarcode", method = RequestMethod.GET)
+    public String initBarcode() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+        String barcode = sdf.format(new Date());
+        return barcode;
     }
 
 }

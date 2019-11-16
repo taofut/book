@@ -2,6 +2,17 @@ layui.use(['form','laydate', 'jquery'], function () {
     var form = layui.form;
     var $ = layui.$;
     var laydate = layui.laydate;
+
+    //初始化条形码
+    $.ajax({
+        url:'/book/readerInfo/initBarcode',
+        dataType:'json',
+        type:'get',
+        success:function(data){
+            $("#barcode").val(data);
+        }
+    });
+
     //监听提交
     form.on('submit(save_add)', function (data) {
         var json = JSON.stringify(data.field);
@@ -28,6 +39,13 @@ layui.use(['form','laydate', 'jquery'], function () {
         return false;
     });
 
+    //关闭
+    $("#close").click(function () {
+        //当你在iframe页面关闭自身时
+        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+        parent.layer.close(index); //再执行关闭
+    });
+
     //禁用回车事件
     document.onkeydown = function (ev) {
         var event = ev || event;
@@ -52,6 +70,7 @@ layui.use(['form','laydate', 'jquery'], function () {
             });
             form.render();//菜单渲染 把内容加载进去
         }
-    })
+    });
+
 
 });

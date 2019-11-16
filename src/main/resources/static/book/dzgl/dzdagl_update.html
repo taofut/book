@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>读者档案添加</title>
+    <title>读者档案更新</title>
     <link rel="stylesheet" href="../../layui/css/layui.css">
     <style type="text/css">
         .layui-form{
@@ -16,7 +16,8 @@
 </head>
 <body>
 
-<form class="layui-form" action="" lay-filter="dzdaglAddForm">
+<form class="layui-form" action="" lay-filter="dzdaglUpdateForm">
+    <input type="hidden" name="id"/>
     <div class="layui-form-item">
         <div class="layui-inline">
             <label class="layui-form-label"><span class="must">* </span>条形码：</label>
@@ -42,13 +43,13 @@
         <div class="layui-inline">
             <label class="layui-form-label"><span class="must">* </span>手机号码：</label>
             <div class="layui-input-inline">
-                <input type="tel" name="tel" lay-verify="required|phone" autocomplete="on" class="layui-input">
+                <input type="tel" name="tel" lay-verify="required|phone" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
             <label class="layui-form-label"><span class="must">* </span>证件号码：</label>
             <div class="layui-input-inline">
-                <input type="text" name="paperno" lay-verify="paperno" placeholder="" autocomplete="on" class="layui-input">
+                <input type="text" name="paperno" lay-verify="paperno" placeholder="" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
@@ -69,7 +70,7 @@
         <div class="layui-inline">
             <label class="layui-form-label"><span class="must">* </span>Email：</label>
             <div class="layui-input-inline">
-                <input type="text" name="email" lay-verify="email" autocomplete="on" class="layui-input">
+                <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
             </div>
         </div>
     </div>
@@ -81,15 +82,15 @@
     </div>
     <div class="layui-form-item">
         <div class="layui-input-block">
-            <button type="submit" class="layui-btn" id="saveAdd" lay-submit="" lay-filter="save_add">提交</button>
+            <button type="submit" class="layui-btn" id="saveUpdate" lay-submit="" lay-filter="save_update">保存</button>
             <button type="button" class="layui-btn layui-bg-gray" id="close">关闭</button>
             <!--<button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
         </div>
     </div>
 </form>
-`
+
 
 <script src="../../layui/layui.js" charset="utf-8"></script>
-<script src="../../layui/myjs/dzdagl_add.js"></script>
+<script src="../../layui/myjs/dzdagl_update.js"></script>
 </body>
 </html>

@@ -17,4 +17,6 @@ public interface ReaderInfoService {
 
     BookResult save(ReaderInfo readerInfo);
 
+    BookResult update(ReaderInfo readerInfo);
+
 }

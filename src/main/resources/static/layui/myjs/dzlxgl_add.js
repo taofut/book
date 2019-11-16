@@ -27,6 +27,13 @@ layui.use(['form', 'jquery'], function () {
         return false;
     });
 
+    //关闭
+    $("#close").click(function () {
+        //当你在iframe页面关闭自身时
+        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+        parent.layer.close(index); //再执行关闭
+    });
+
     //禁用回车事件
     document.onkeydown = function (ev) {
         var event = ev || event;
