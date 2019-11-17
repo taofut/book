@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -59,6 +60,11 @@ public class ReaderInfoController {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
         String barcode = sdf.format(new Date());
         return barcode;
+    }
+
+    @RequestMapping("/save_del")
+    public BookResult saveDel(Integer[] ids) {
+        return readerInfoService.delete(Arrays.asList(ids));
     }
 
 }

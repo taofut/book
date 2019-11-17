@@ -74,4 +74,17 @@ public class ReaderInfoServiceImpl implements ReaderInfoService{
         }
         return BookResult.ok();
     }
+
+    @Override
+    public BookResult delete(List<Integer> ids) {
+        try {
+            for (Integer id : ids) {
+                readerInfoMapper.deleteByPrimaryKey(id);
+            }
+        } catch (Exception e) {
+            log.error("读者档案删除失败！");
+            throw new RuntimeException(e);
+        }
+        return BookResult.ok();
+    }
 }

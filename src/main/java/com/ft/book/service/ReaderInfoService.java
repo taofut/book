@@ -4,6 +4,7 @@ import com.ft.base.bean.PagerBean;
 import com.ft.book.bean.ReaderInfo;
 import com.ft.book.utils.BookResult;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -18,5 +19,7 @@ public interface ReaderInfoService {
     BookResult save(ReaderInfo readerInfo);
 
     BookResult update(ReaderInfo readerInfo);
+
+    BookResult delete(List<Integer> ids);
 
 }

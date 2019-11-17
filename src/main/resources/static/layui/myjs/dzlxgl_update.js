@@ -6,13 +6,6 @@ function init(id,name,number) {
         $("#typeName").val(name);
         $("#number").val(number);
 
-        //取消
-        $("#btn_cancel").click(function () {
-            //关闭窗口
-            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
-            parent.layer.close(index); //再执行关闭
-        });
-
         //保存
         form.on('submit(save_update)', function(data){
             var json=JSON.stringify(data.field);

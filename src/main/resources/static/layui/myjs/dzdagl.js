@@ -11,7 +11,11 @@ layui.use(['table', 'laypage','jquery'], function(){
         ,cols: [[ //表头
             {type: 'checkbox', width:'5%',fixed: 'left'}
             ,{title: '序号', width:'5%', type: 'numbers', fixed: 'left'}
-            ,{field: 'barcode',title: '条形码', align:'center',style:'text-align:left',width:'15%'}
+            ,{field: 'barcode',title: '条形码', event: 'view',align:'center',style:'text-align:left',width:'15%'
+                ,templet: function(d){
+                    return '<a style="text-decoration: underline;color: blue" href="javascript:;">'+ d.barcode +'</a>';
+                }
+            }
             ,{field: 'name', title: '姓名', align:'center',style:'text-align:left',width:'10%'}
             ,{field: 'typeName', title: '读者类型', align:'center',style:'text-align:left', width:'10%'}
             // ,{field: 'paperType', title: '证件类型', align:'center',style:'text-align:left', width:'10%'}
@@ -23,6 +27,8 @@ layui.use(['table', 'laypage','jquery'], function(){
         // done: function () {
         //     $("[data-field='remark']").css('display','none');
         // }
+
+
     });
 
     //绑定搜索按钮
@@ -128,6 +134,71 @@ layui.use(['table', 'laypage','jquery'], function(){
                 var iframeWin = window[layero.find('iframe')[0]['name']];
                 //调用子页面方法
                 iframeWin.init(formData);
+            }
+        });
+    }
+
+    //监听单元格事件
+    table.on('tool(readInfo_toolbar)', function(obj){
+        var data = obj.data;
+        if(obj.event === 'view'){
+            var formData = {};
+            formData.id = data.id;
+            formData.barcode = data.barcode;
+            formData.name = data.name;
+            formData.sex = data.sex;
+            formData.tel = data.tel;
+            formData.paperno = data.paperNO;
+            formData.birthday = data.birthday;
+            formData.typeid = data.typeid;
+            formData.email = data.email;
+            formData.remark = data.remark;
+            //页面层
+            layer.open({
+                type: 2,
+                anim: 1,
+                resize: false,
+                offset: 't',
+                title: '档案查看',
+                area: ['1030px', '420px'],
+                // btn: ['确认', '取消'],
+                fix: false,
+                content: 'dzdagl_view.html',
+                success: function (layero, index) {
+                    var iframeWin = window[layero.find('iframe')[0]['name']];
+                    //调用子页面方法
+                    iframeWin.init(formData);
+                }
+            });
+        }
+    });
+
+    /**
+     * 删除
+     * @param res
+     */
+    function del(res) {
+        var ids = [];
+        for (var i = 0; i < res.length; i++) {
+            ids.push(res[i].id);
+        }
+
+        $.ajax({
+            url: "/book/readerInfo/save_del",
+            data: {"ids": ids.join(",")},
+            type: "post",
+            success: function (res) {
+                if (res.status == 200) {
+                    layer.alert("操作成功！",{icon: 1}, function () {
+                        //刷新表格
+                        window.location.reload();
+                    });
+                } else {
+                    layer.alert(res.msg,{icon: 5});
+                }
+            },
+            error: function () {
+                layer.alert("操作失败！",{icon: 5});
             }
         });
     }
